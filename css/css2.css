@@ -1,0 +1,21 @@
+.float-right {
+    float: right;
+    
+}
+body {
+    background: red;
+    margin: 0 -15px;
+}
+.full-width-photo {
+    width: 70%;
+/*
+    background: linear-gradient(to bottom right, rgba(0, 47, 75, 0.5), rgba(220, 66, 37, 0.5));
+    background-size:cover;
+    background-position: center center;
+*/
+    margin: 0 auto;
+    display: block;
+    
+}
+
+
