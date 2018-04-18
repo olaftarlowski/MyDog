@@ -11,3 +11,4 @@ $(".scale-img-onclick").each(function(){
         
     })
 });
+
