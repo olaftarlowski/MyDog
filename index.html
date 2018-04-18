@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 <body>
+   <!-- container fluid rozciaga na cala szerokosc -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
+               <!-- tworzenie NavBar -->
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                    <a class="navbar-brand" href="#"><span class="fas fa-paw"></span> Growlie</a>
+                    <a class="navbar-brand" id="growlie" href="#opiesgu"><span class="fas fa-paw"></span> Growlie</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -40,12 +42,14 @@
                 </nav>      
             </div>
         </div>
+        <!-- pierwsze zdjecie -->
         <div class="row" id="opiesgu">
             <div class="col-12">
                 <img class="full-width-photo img-circle" src="images/foto7.jpg" alt="zdjecie bialego psa na kocyku" />
             </div>
         </div>
     </div>
+      <!-- paragrafy, zmiana na container, nie rozciaga sie na cala szerokosc -->
        <div class="container">
         <div class="row" >
             <div class="col-12">
@@ -65,21 +69,23 @@
                 <h3>Galeria zdjęć</h3>
             </div>
         </div>
+        <!-- zdjecia z galerii -->
         <div class="row" id="galeria">
             <div class="col-12">
                <div class="row">
                
                <div class="col-xs-12 col-md-6">
                                   
-                                   <img src="images/foto3.jpg" class="img-thumbnail rounded scale-img-onclick " alt="">
+                                   <img src="images/foto3.jpg" class="img-thumbnail rounded scale-img-onclick " id="image1" alt="Piesek z brudnym pyszczkiem">
                </div>
                 <div class="col-xs-12 col-md-6">
-                                    <img src="images/foto5.jpg" class="img-thumbnail rounded scale-img-onclick " alt="">
+                                    <img src="images/foto5.jpg" class="img-thumbnail rounded scale-img-onclick " id="image2" alt="Piesek w kolejce do karmienia">
                 </div>
 
                 </div>
             </div>
         </div>
+        <!-- film z YT -->
         <div class="row">
             <div class="col-12">
                 <div class="full-width-movie " id="yt-movie">
@@ -89,6 +95,7 @@
             </div>
         </div>
     </div>
+       <!-- stopka + kontakt -->
         <div class="container-fluid">
             <div class="row" id="kontakt">
                 <div class="col-12">
@@ -99,8 +106,18 @@
             </div>
         </div>
                 
-                    
-        
+  <!-- modal -->                 
+<div id="myModal" class="modal">
+
+  <!-- przycisk zamkniecia -->
+  <span class="close">X</span>
+
+  <!-- modal zawartosc -->
+  <img class="modal-content" id="img01">
+
+  <!-- tytul, zawartosc alt-->
+  <div id="caption"></div>
+</div>        
     
 <script src="js/scripts.js" type="text/javascript"></script>
 

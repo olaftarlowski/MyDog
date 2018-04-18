@@ -1,50 +1,109 @@
-$(".scale-img-onclick").each(function(){
-    $(this).click(function(){
-      console.log($(this));  
-        if($(this).hasClass('enlarged')){
-            $(this).removeClass('enlarged');
-            $(this).stop().animate({width: 280, height: 187}, 200);
-        }else{
-            $(this).addClass('enlarged');
-            $(this).stop().animate({width: 800, height: 533}, 200);
-        }
-        
-    })
-});
 
-// Select all links with hashes
+// zaznacza linkie z hashem # 
 $('a[href*="#"]')
-  // Remove links that don't actually link to anything
+  // nie uzywa niepolaczonych linkow
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
-    // On-page links
+    // linki na stronie
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
       && 
       location.hostname == this.hostname
     ) {
-      // Figure out element to scroll to
+      // sprawdza do ktorego elementu skrollowac
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
+      // sprawdza czy scroll wystepuje
       if (target.length) {
-        // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
         }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
+          // odwolanie po animacji
+          // musi zmienic focus
           var $target = $(target);
           $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
+          if ($target.is(":focus")) { // sprawdza czy target byl focusowany
             return false;
           } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
+            $target.attr('tabindex','-1'); // dodaje tabindex elementom ktorych nie mozna focusowac
+            $target.focus(); // ustawia focus ponownie
           };
         });
       }
     }
   });
+
+
+
+
+
+// modal
+var modal = document.getElementById('myModal');
+
+// bierze obraz i wklada do modal
+var img1 = document.getElementById('image1');
+var img2 = document.getElementById('image2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img1.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// bierze <span> do zamkniecia modal
+var span = document.getElementsByClassName("close")[0];
+
+// jak uzytkownik kliknie span zamyka modal, dodane zamkniecie na klik modal
+span.onclick = function() {
+  modal.style.display = "none";
+} 
+modal.onclick = function() {
+  modal.style.display = "none";
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
