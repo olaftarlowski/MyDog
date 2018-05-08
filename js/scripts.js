@@ -69,11 +69,27 @@ modal.onclick = function() {
   modal.style.display = "none";
 } 
 
+var button = document.button
+
+//$('.light-button').mouseover(function(){
+//  $(this).css('background-color', 'rgba(21, 24, 24, 0.4)'); 
+//    console.log("jest");
+//});
+
+//$('.light-button').mouseout(function(){
+//  $(this).css('background-color', 'rgba(21, 24, 24, 0.4)'); 
+//    console.log("jest");
+//});
+//mouse
 
 
 
+var video = document.getElementsByClassName("video");
 
-
+video.onclick = function(){
+  video.style.backgroundColor = 'rgba(23, 23, 23, 0.5)'; 
+    console.log("jest");
+};
 
 
 

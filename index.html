@@ -11,6 +11,7 @@
 			  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/css2.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body>
    <!-- container fluid rozciaga na cala szerokosc -->
@@ -64,13 +65,15 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
+        </div>
+        <div class="container galeria-1">
+            <div class="row ">
+            <div class="col-12 ">
                 <h3>Galeria zdjęć</h3>
             </div>
-        </div>
+            </div>
         <!-- zdjecia z galerii -->
-        <div class="row" id="galeria">
+            <div class="row " id="galeria">
             <div class="col-12">
                <div class="row">
                
@@ -84,17 +87,47 @@
 
                 </div>
             </div>
+            </div>
         </div>
         <!-- film z YT -->
+        <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="full-width-movie " id="yt-movie">
-                    <h3>Film z naszym bohaterem</h3>
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/E0uMA8i3d8I" frameborder="0"  allowfullscreen></iframe>
+                <div class="full-width-movie text-center" id="yt-movie">
+                    <h3 class="video">Film z naszym bohaterem</h3>
+                    <div class="col-xs-12 embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="854" height="480" src="https://www.youtube.com/embed/E0uMA8i3d8I" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+    
+    <!-- siatka foto -->
+     <div class="container ">
+            <div class="row galeria-2">
+
+                   <div class="col-6 col-md-6 col-sm-12 ">
+                     <img src="images/sam-schooler-4824-unsplash.jpg" alt="sky" class="img-thumbnail">  
+                   </div> 
+                   
+                   <div class="col-6 col-md-6 col-sm-12 checkbox ">
+                         <h5 class="checkbox2">A z pieskiem można spacerować pod pięknym niebem</h5>
+                   </div>
+
+            </div>
+            <div class="row galeria-2">
+
+                   <div class="col-6 col-md-6 col-sm-12 checkbox ">
+                         <h5 class="checkbox2" >Oraz zwiedzać piękne lasy...</h5>
+                   </div>
+                   <div class="col-6 col-md-6 col-sm-12 ">
+                     <img src="images/stefan-steinbauer-23268-unsplash.jpg" alt="sky" class="img-thumbnail">  
+                   </div>
+
+            </div>
+    </div> 
+      
        <!-- stopka + kontakt -->
         <div class="container-fluid">
             <div class="row" id="kontakt">
@@ -105,7 +138,7 @@
                 </div>
             </div>
         </div>
-                
+           
   <!-- modal -->                 
 <div id="myModal" class="modal">
 
